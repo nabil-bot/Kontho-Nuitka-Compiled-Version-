@@ -1,0 +1,20 @@
+{
+    "size": -4,
+    "btnWidth": 24,
+    "btnHeight": 24,
+    "paddingX": 4,
+    "paddingy": 4,
+    "IconSize": 17,
+    "animationDuration": 260,
+    "barOpacity": 1.0,
+    "styleSheet": "QFrame{\nborder: 1px solid  rgba(211, 233, 238, 100);\nborder-radius:5px;\nbackground-color: rgb(37, 34, 46);\n}\n\n QLabel {\nborder-radius:4px;\nborder:none;\nbackground-color: rgb(255, 255, 255);\nfont: 57 10px \"DM Mono Medium\";\n}\n\n\nQPushButton{\nbackground:transparent;\nborder:none;\nborder-radius:4px;\n}\n\nQPushButton::menu-indicator { image: none; }\nQPushButton#Lang_Button{\nborder-radius:3px;\nfont: 57 13px \"DM Mono Medium\";\ncolor: black;\nborder:none;\nbackground-color: rgb(255, 255, 255);\n}\n\nQPushButton#Lang_Button:hover{\ncolor: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));\nbackground-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0.977727, y2:0, stop:0 rgba(160, 207, 255, 255), stop:1 rgba(255, 255, 255, 255));\n}\n\nQPushButton:hover{\nbackground-color: rgb(73, 156, 240);\nbackground-color: rgb(85, 84, 90);\n}\n\nQPushButton#Lang_Button:pressed{\nbackground-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 250), stop:1 rgba(3, 115, 255, 250));\n}\n\nQPushButton:pressed{\nbackground-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 250), stop:1 rgba(3, 115, 255, 250));\"\n}\n \n",
+    "micIconPath": "Imgs\\Icons\\Mic 2 png.png",
+    "stopIconPath": "Imgs\\Icons\\Stop 2 png.png",
+    "playIconPath": "Imgs\\Icons\\T_M_on.png",
+    "PauseIconPath": "Imgs\\Icons\\T_M_off.png",
+    "managerIconPath": "Imgs\\Icons\\WordManager PNG.png",
+    "oskIconPath": "Imgs\\Icons\\OSK logo png.png",
+    "docPadIconPath": "Imgs\\Icons\\Doc pad PNG.png",
+    "optionsIconPath": "Imgs\\Icons\\Gear 4.png",
+    "appIconPath": "Imgs\\Icons\\Close final correction.png"
+}
