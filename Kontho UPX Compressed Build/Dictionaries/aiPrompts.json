@@ -1,0 +1,23 @@
+{
+    "word": {
+        "\u2196\ufe0f\u2198\ufe0f Antonyms": "What are the antonyms of the word? Return only the antonyms, each on a new line. Do not include explanations, comments, or formatting of any kind\u2014just the words.",
+        "\u2196\ufe0f\u2196\ufe0f Synonyms": "What are the synonyms of the word? Return only the synonyms, each on a new line. Do not include explanations, comments, or formatting of any kind\u2014just the words.",
+        "\ud83d\udcd9\ud83d\udd0d Meaning": "What is the meaning of this word? Define in one line (do not use any linebreakers).",
+        "Bangla": "write this word in Bangla, and return just the modified text whith no quote aroud the text."
+    },
+    "sentence": {
+        "\ud83d\udccf\u2714\ufe0f Grammatical Correction": "make Grammatical spelling Correction of this text, and return just the modified text whith no quote aroud the text. (it should be in the same language as the given text)",
+        "\u2753\u2757Punctuate": "write this text with proper punctuations, and return just the modified text whith no quote aroud the text. (it should be in the same language as the given text)",
+        "\ud83c\udfa9 \ud83d\udc54 Formal Style": "write this text in formal style, and return just the modified text whith no quote aroud the text. (it should be in the same language as the given text)",
+        "\ud83e\ude74\ud83d\udc56 Casual Style": "write this text in a bit casual Style, no need to use 'yo' or any slang, you can use emojis only if it is necessary, try to sound natural, and return just the modified text whith no quote aroud the text.(it should be in the same language as the given text)",
+        "\ud83e\ude73\ud83d\udc55 Shortened": "Shortened this text, and return just the modified text whith no quote aroud the text. (it should be in the same language as the given text)",
+        "\ud83d\uddc2\ufe0f\ud83d\udcdd Summarized": "Summarize this text, and return just the modified text whith no quote aroud the text. (it should be in the same language as the given text)",
+        "\ud83d\udd0a\u2728 Sound Clear": "make this text sound clear and simple, and return just the modified text whith no quote aroud the text. (it should be in the same language as the given text)",
+        "\ud83d\udd0a\ud83c\udf3f Simple Sounding": "write this text in a clear, simple format without using heavy words, sound natural and return just the modified text whith no quote aroud the text. (it should be in the same language as the given text)",
+        "\ud83c\udfa8\u2728 Creative Style": "write this text in a Creative Style, and return just the modified text whith no quote aroud the text. (it should be in the same language as the given text)",
+        "\ud83e\udd16\ud83e\udde0 AI": "Try to comprehend the sentiment of the text and write it in your own words, and return just the modified text whith no quote aroud the text. (it should be in the same language as the given text)",
+        "\ud83d\ude04\ud83d\udc99 Add emojis": "Customize this text by adding appropriate emojis in this text and return just the modified text whith no quote aroud the text. return just the modified text nothing else.",
+        "Bangla": "write this text in Bangla, and return just the modified text whith no quote aroud the text.",
+        "English": "write this text in English, and return just the modified text whith no quote aroud the text."
+    }
+}

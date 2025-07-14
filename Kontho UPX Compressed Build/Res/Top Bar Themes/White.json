@@ -1,0 +1,22 @@
+{
+    "size": -4,
+    "btnWidth": 30,
+    "btnHeight": 30,
+    "paddingX": 6,
+    "paddingy": 1,
+    "IconSize": 17,
+    "animationDuration": 260,
+    "barOpacity": 1.0,
+    "styleSheet": "QFrame{\nborder: none;\nborder-radius:3px;\nbackground-color: white;\n}\n\n QLabel {\nborder-radius:4px;\nborder:none;\nbackground-color: rgb(255, 255, 255);\nfont: 57 14px \"DM Mono Medium\";\n}\n\nQPushButton{\nbackground:transparent;\nborder:none;\nborder-radius:4px;\n}\n\nQPushButton::menu-indicator { image: none; }\n\nQPushButton#Lang_Button{\nborder-radius:5px;\n\tfont: 57 13px \"DM Mono Medium\";\ncolor: black;\nborder:px solid black;\nbackground-color: rgb(255, 255, 255);\n\tborder-bottom-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(149, 164, 167, 255), stop:1 rgba(211, 233, 238, 255));\n\tborder-left-color: rgb(211, 233, 238);\n\tborder-right-color: qlineargradient(spread:pad, x1:0.182, y1:0, x2:1, y2:0, stop:0 rgba(177, 195, 199, 255), stop:1 rgba(211, 233, 238, 255));\n\tborder-top-color: rgb(211, 233, 238);\n}\n\nQPushButton#Lang_Button:hover{\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0.977727, y2:0, stop:0 rgba(160, 207, 255, 255), stop:1 rgba(255, 255, 255, 255));\n}\n\nQPushButton:hover{\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0.977727, y2:0, stop:0 rgba(160, 207, 255, 255), stop:1 rgba(255, 255, 255, 255));\n}\n\nQPushButton#Lang_Button:pressed{\nbackground-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 250), stop:1 rgba(3, 115, 255, 250));\n}\n\nQPushButton:pressed{\nbackground-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 250), stop:1 rgba(3, 115, 255, 250));\"\n}\n ",
+    "micIconPath": "Imgs\\Icons\\mic blue.png",
+    "stopIconPath": "Imgs\\Icons\\stop-button.png",
+    "playIconPath": "Imgs\\Icons\\play.png",
+    "PauseIconPath": "Imgs\\Icons\\pause cirblu.png",
+    "managerIconPath": "Imgs\\Icons\\done.png",
+    "oskIconPath": "Imgs\\Icons\\mouse (1).png",
+    "docPadIconPath": "Imgs\\Icons\\notepad cus.png",
+    "optionsIconPath": "Imgs\\Icons\\settings (4).png",
+    "appIconPath": "Imgs\\Icons\\menu b.png",
+    "langBtnWiden": -10,
+    "leftRghtPadding": 2
+}

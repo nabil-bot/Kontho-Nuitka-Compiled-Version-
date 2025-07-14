@@ -1,0 +1,22 @@
+{
+    "size": -4,
+    "btnWidth": 30,
+    "btnHeight": 30,
+    "paddingX": 0,
+    "paddingy": 1,
+    "IconSize": 20,
+    "animationDuration": 260,
+    "barOpacity": 1.0,
+    "styleSheet": "QFrame{\nborder-top-right-radius: 1px;\nborder-top-left-radius: 1px;\nborder-bottom-right-radius: 1px;\nborder-bottom-left-radius: 1px;\nborder: solid;\nborder-width: 1px;\nborder-color:rgba(93, 173, 226, 200);\nbackground-color: rgba(2, 56, 255, 11);\n}\nQPushButton{\nborder-radius:0px;\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(1, 111, 255, 255), stop:1 rgba(12, 222, 255, 255));\nicon-size: 30px;\n}\n\nQPushButton:pressed{\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(12, 222, 255, 255), stop:1 rgba(1, 111, 255, 255));\n} \nQPushButton::menu-indicator{\nimage:none\n}\nQPushButton#Close_btn{\nborder-top-right-radius: 1px;\nborder-bottom-right-radius: 1px;\n}\nQPushButton#Stop_btn{\nborder-top-left-radius: 1px;\nborder-bottom-left-radius: 1px;\n}\nQPushButton#Mic_btn{\nborder-top-left-radius: 1px;\nborder-bottom-left-radius: 1px;\n}\nQPushButton#Lang_Button{\nborder-radius:1px;\nfont: 57 14px \"DM Mono Medium\";\ncolor: black;\nborder: 1px solid rgb(3, 115, 255);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0.977727, y2:0, stop:0 rgba(160, 207, 255, 255), stop:1 rgba(255, 255, 255, 255));\t \n}\nQPushButton#Lang_Button:hover{\ncolor: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(207, 207, 207, 240), stop:1 rgba(245, 245, 245, 240));\n}\nQPushButton:hover{\nborder: solid;\nborder-width: 1px;\nborder-color: rgba(255, 255, 250, 150);\n}\nQPushButton#Lang_Button:pressed{\nbackground-color:white;\n}\n QLabel {\nborder-radius:4px;\nborder:none;\nbackground-color: rgb(255, 255, 255);\nfont: 57 13px \"DM Mono Medium\";\n}",
+    "micIconPath": "Imgs\\Icons\\Mic 2 png.png",
+    "stopIconPath": "Imgs\\Icons\\Stop 2 png.png",
+    "playIconPath": "Imgs\\Icons\\T_M_off.png",
+    "PauseIconPath": "Imgs\\Icons\\T_M_on.png",
+    "managerIconPath": "Imgs\\Icons\\WordManager PNG.png",
+    "oskIconPath": "Imgs\\Icons\\OSK logo png.png",
+    "docPadIconPath": "Imgs\\Icons\\Doc pad PNG.png",
+    "optionsIconPath": "Imgs\\Icons\\Gear 4.png",
+    "appIconPath": "Imgs\\Icons\\Close final correction.png",
+    "langBtnWiden": -5,
+    "leftRghtPadding": 1
+}

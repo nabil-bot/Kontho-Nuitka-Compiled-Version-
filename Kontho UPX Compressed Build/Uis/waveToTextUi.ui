@@ -1,0 +1,2165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1053</width>
+    <height>622</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>WAV to Text [BETA]</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton {
+	font: 57 15px &quot;DM Mono Medium&quot;;
+	min-height: 26px;
+}
+
+QComboBox{
+font: 57 15px &quot;DM Mono Medium&quot;;
+}
+
+QTableWidget::item {
+    color: black;
+}
+QTableWidget::item:hover {
+    background-color: #6eb5d5;
+    color: white;
+}
+QTabWidget::pane {
+    border: 1px solid #00a6fb;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+QTabWidget::tab-bar {
+    left: 10px;
+}
+
+QTabBar::tab {
+	background-color: #f2f2f2;
+    border: 1px solid #dcdcdc;
+    color: #333333;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    min-width: 135px;
+	 min-height: 20px;
+    padding: 3px;
+	font: 57 15px &quot;DM Mono Medium&quot;;
+}
+
+QTabBar::tab:selected {
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #429de3, stop: 1 #2d70b8);
+	color: rgb(255, 255, 255);
+	font: 57 15px &quot;DM Mono Medium&quot;;
+}
+
+QTabBar::tab:hover {
+	 background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+color:black;
+}
+QLineEdit {  
+	background-color: #f5f5f5;
+    color: black;
+    border: none;
+	
+	font: 57 15px &quot;DM Mono Medium&quot;;
+}
+QLineEdit:focus {
+    border: 2px solid #00bfff;
+}
+QLineEdit:hover {
+	background-color: rgb(224, 237, 244);
+}
+QHeaderView::section {
+	background-color: rgb(105, 171, 216);
+    color: white;
+    padding-left: 4px;
+    border: 1px solid #ffffff;
+}
+QHeaderView::section:checked {
+    background-color: #429de3;
+    color: white;
+}
+
+QDockWidget {
+    font-size: 12px;
+    border: 2px solid rgb(181, 181, 181);
+}
+
+QScrollBar::handle:vertical { 
+	background-color: rgb(0, 255, 0);
+}
+
+QScrollBar::handle:vertical:pressed {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 6px;
+}
+
+QSpinBox, QDoubleSpinBox{
+font: 57 16px &quot;DM Mono Medium&quot;;
+max-width: 160px;
+border: none;
+}
+
+QTableWidget {
+    background-color: #f5f5f5;
+    alternate-background-color: #e6e6e6;
+    gridline-color: #cccccc;
+    border: none;
+    selection-background-color: #cceeff;
+    selection-color: #000000;
+   	font: 18px &quot;Kalpurush&quot;;
+}
+
+QHeaderView::section {
+    background-color: #d9d9d9;
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 4px;
+}
+
+QTableWidget::item:selected {
+    background-color: #cceeff;
+    color: #000000;
+}
+
+QLabel{
+	font: 57 15px &quot;DM Mono Medium&quot;;
+}
+
+QGroupBox::title {
+font: 57 13px &quot;DM Mono Medium&quot;;
+color: gray;
+}
+QCheckBox{
+	font: 57 15px &quot;DM Mono Medium&quot;;
+}
+
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1033</width>
+         <height>582</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QScrollArea" name="scrollArea_2">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>1014</width>
+             <height>1500</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_22">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QGroupBox" name="groupBox_26">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>1500</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QGroupBox {
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px; /* leave space at the top for the title */
+    font-weight: bold;
+	font-size: 14px;
+	background-color: rgb(0, 166, 251);
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top; /* position at the top center */
+    padding: 3 8px;
+	color: rgb(202, 240, 248);
+	border-radius:4px;
+	background-color:  rgb(248, 248, 248);
+	font: 57 14px &quot;DM Mono Medium&quot;;
+}</string>
+              </property>
+              <property name="title">
+               <string/>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_27">
+               <item row="1" column="0">
+                <widget class="QGroupBox" name="groupBox">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>100</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QGroupBox {
+    border: none;
+    border-radius: 5px;
+    margin-top: 1ex; /* leave space at the top for the title */
+	background-color: rgb(134, 202, 237);
+	background-color: rgb(76, 201, 240);
+}
+QGroupBox::title {
+	border-radius:3px;
+	background-color: rgb(154, 224, 245);
+}</string>
+                 </property>
+                 <property name="title">
+                  <string/>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout">
+                  <item>
+                   <widget class="QGroupBox" name="groupBox_2">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>720</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QGroupBox {
+    border: none;
+	background-color: rgb(154, 224, 245);
+}
+QGroupBox::title {
+	border:none;
+	background-color: rgb(76, 201, 240);
+}
+</string>
+                    </property>
+                    <property name="title">
+                     <string/>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_3">
+                     <item row="0" column="1" rowspan="2">
+                      <widget class="QGroupBox" name="groupBox_10">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>650</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QGroupBox {
+    border: none;
+	background-color: rgb(200, 236, 243);
+}
+
+
+</string>
+                       </property>
+                       <property name="title">
+                        <string/>
+                       </property>
+                       <layout class="QGridLayout" name="gridLayout_12">
+                        <item row="1" column="0">
+                         <widget class="QTabWidget" name="tabWidget_2">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>200</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QTabWidget{
+border-color: rgb(76, 201, 240);
+}</string>
+                          </property>
+                          <property name="currentIndex">
+                           <number>0</number>
+                          </property>
+                          <widget class="QWidget" name="tab_3">
+                           <attribute name="title">
+                            <string>WAV file</string>
+                           </attribute>
+                           <layout class="QGridLayout" name="gridLayout_24">
+                            <item row="0" column="1">
+                             <widget class="QGroupBox" name="groupBox_23">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="title">
+                               <string/>
+                              </property>
+                              <layout class="QGridLayout" name="gridLayout_25">
+                               <item row="1" column="3">
+                                <spacer name="horizontalSpacer_2">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>40</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                               <item row="1" column="1">
+                                <spacer name="horizontalSpacer">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>40</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                               <item row="1" column="2">
+                                <widget class="QGroupBox" name="groupBox_11">
+                                 <property name="minimumSize">
+                                  <size>
+                                   <width>0</width>
+                                   <height>0</height>
+                                  </size>
+                                 </property>
+                                 <property name="title">
+                                  <string/>
+                                 </property>
+                                 <layout class="QVBoxLayout" name="verticalLayout_3">
+                                  <property name="spacing">
+                                   <number>12</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QGroupBox" name="groupBox_4">
+                                    <property name="minimumSize">
+                                     <size>
+                                      <width>0</width>
+                                      <height>170</height>
+                                     </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>16777215</width>
+                                      <height>185</height>
+                                     </size>
+                                    </property>
+                                    <property name="styleSheet">
+                                     <string notr="true">QGroupBox::title {
+color: rgb(76, 201, 240);
+background:transparent;
+}</string>
+                                    </property>
+                                    <property name="title">
+                                     <string>Description</string>
+                                    </property>
+                                    <layout class="QGridLayout" name="gridLayout_4">
+                                     <property name="topMargin">
+                                      <number>22</number>
+                                     </property>
+                                     <item row="3" column="6" rowspan="3">
+                                      <widget class="QGroupBox" name="groupBox_6">
+                                       <property name="title">
+                                        <string/>
+                                       </property>
+                                       <layout class="QGridLayout" name="gridLayout_6">
+                                        <item row="0" column="0">
+                                         <widget class="QLabel" name="label_6">
+                                          <property name="text">
+                                           <string>Language:</string>
+                                          </property>
+                                         </widget>
+                                        </item>
+                                        <item row="0" column="1">
+                                         <widget class="QComboBox" name="LangComboBox">
+                                          <property name="minimumSize">
+                                           <size>
+                                            <width>126</width>
+                                            <height>0</height>
+                                           </size>
+                                          </property>
+                                          <item>
+                                           <property name="text">
+                                            <string>Bengali (Bangladesh)	bn-BD</string>
+                                           </property>
+                                          </item>
+                                          <item>
+                                           <property name="text">
+                                            <string>Bengali (India)	bn-IN</string>
+                                           </property>
+                                          </item>
+                                          <item>
+                                           <property name="text">
+                                            <string>English (India)	en-IN</string>
+                                           </property>
+                                          </item>
+                                          <item>
+                                           <property name="text">
+                                            <string>English (U K)                   en-GB</string>
+                                           </property>
+                                          </item>
+                                          <item>
+                                           <property name="text">
+                                            <string>English (United States)	en-US</string>
+                                           </property>
+                                          </item>
+                                         </widget>
+                                        </item>
+                                       </layout>
+                                      </widget>
+                                     </item>
+                                     <item row="2" column="2">
+                                      <widget class="QLabel" name="label_2">
+                                       <property name="text">
+                                        <string>Type:</string>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                     <item row="2" column="3" colspan="2">
+                                      <widget class="QLineEdit" name="TypeLineEdit">
+                                       <property name="readOnly">
+                                        <bool>true</bool>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                     <item row="5" column="2">
+                                      <widget class="QLabel" name="label_4">
+                                       <property name="text">
+                                        <string>Duration:</string>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                     <item row="5" column="3" colspan="2">
+                                      <widget class="QLineEdit" name="DurationLineEdit">
+                                       <property name="readOnly">
+                                        <bool>true</bool>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                     <item row="0" column="5" rowspan="6">
+                                      <widget class="Line" name="line">
+                                       <property name="minimumSize">
+                                        <size>
+                                         <width>20</width>
+                                         <height>0</height>
+                                        </size>
+                                       </property>
+                                       <property name="orientation">
+                                        <enum>Qt::Vertical</enum>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                     <item row="3" column="3" colspan="2">
+                                      <widget class="QLineEdit" name="SizeLineEdit">
+                                       <property name="readOnly">
+                                        <bool>true</bool>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                     <item row="0" column="6" rowspan="3">
+                                      <widget class="QGroupBox" name="groupBox_5">
+                                       <property name="minimumSize">
+                                        <size>
+                                         <width>0</width>
+                                         <height>104</height>
+                                        </size>
+                                       </property>
+                                       <property name="styleSheet">
+                                        <string notr="true">QGroupBox {
+    border: none;
+	background-color: rgb(200, 236, 243);
+}
+
+QGroupBox::title {
+	border:none;
+	
+	color: rgb(76, 201, 240);
+	background-color: rgb(208, 248, 255);
+}</string>
+                                       </property>
+                                       <property name="title">
+                                        <string>Path</string>
+                                       </property>
+                                       <layout class="QGridLayout" name="gridLayout_5">
+                                        <property name="topMargin">
+                                         <number>25</number>
+                                        </property>
+                                        <property name="horizontalSpacing">
+                                         <number>5</number>
+                                        </property>
+                                        <property name="verticalSpacing">
+                                         <number>4</number>
+                                        </property>
+                                        <item row="1" column="0" colspan="3">
+                                         <widget class="QLineEdit" name="PathLineEdit">
+                                          <property name="readOnly">
+                                           <bool>true</bool>
+                                          </property>
+                                         </widget>
+                                        </item>
+                                        <item row="0" column="1" colspan="2">
+                                         <widget class="QPushButton" name="PlayPausePushButton">
+                                          <property name="enabled">
+                                           <bool>false</bool>
+                                          </property>
+                                          <property name="text">
+                                           <string>▶ Play</string>
+                                          </property>
+                                         </widget>
+                                        </item>
+                                        <item row="0" column="0">
+                                         <widget class="QPushButton" name="CopyPathPushButton">
+                                          <property name="toolTip">
+                                           <string>Copy File Path</string>
+                                          </property>
+                                          <property name="text">
+                                           <string>Copy</string>
+                                          </property>
+                                         </widget>
+                                        </item>
+                                       </layout>
+                                      </widget>
+                                     </item>
+                                     <item row="1" column="2">
+                                      <widget class="QLabel" name="label">
+                                       <property name="text">
+                                        <string>Name:</string>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                     <item row="3" column="2">
+                                      <widget class="QLabel" name="label_3">
+                                       <property name="text">
+                                        <string>Size:</string>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                     <item row="1" column="3" colspan="2">
+                                      <widget class="QLineEdit" name="NameLineEdit">
+                                       <property name="readOnly">
+                                        <bool>true</bool>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                    </layout>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QGroupBox" name="groupBox_7">
+                                    <property name="styleSheet">
+                                     <string notr="true">QSpinBox{
+border:none;
+}
+
+QGroupBox::title {
+color: rgb(76, 201, 240);
+background:transparent;
+}</string>
+                                    </property>
+                                    <property name="title">
+                                     <string>Additional info</string>
+                                    </property>
+                                    <layout class="QGridLayout" name="gridLayout_7">
+                                     <property name="topMargin">
+                                      <number>25</number>
+                                     </property>
+                                     <item row="3" column="0">
+                                      <widget class="QLabel" name="label_8">
+                                       <property name="toolTip">
+                                        <string>Anything quieter than this will be considered silence.</string>
+                                       </property>
+                                       <property name="text">
+                                        <string>Silence threshold:</string>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                     <item row="1" column="1" colspan="2">
+                                      <widget class="QSpinBox" name="silenceLengthSpinBox">
+                                       <property name="toolTip">
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;minimum length of a silence to be used for a split&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                       </property>
+                                       <property name="styleSheet">
+                                        <string notr="true"/>
+                                       </property>
+                                       <property name="suffix">
+                                        <string> mil. sec.</string>
+                                       </property>
+                                       <property name="maximum">
+                                        <number>9999</number>
+                                       </property>
+                                       <property name="singleStep">
+                                        <number>5</number>
+                                       </property>
+                                       <property name="value">
+                                        <number>400</number>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                     <item row="1" column="0">
+                                      <widget class="QLabel" name="label_7">
+                                       <property name="toolTip">
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;minimum length of a silence to be used for a split&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                       </property>
+                                       <property name="text">
+                                        <string>Minimum silence length:</string>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                     <item row="4" column="0">
+                                      <widget class="QLabel" name="label_13">
+                                       <property name="toolTip">
+                                        <string>Leave some silence at the beginning and end of the chunks.
+Keeps the sound from sounding like it is abruptly cut off.
+When the length of the silence is less than the keep_silence duration
+it is split evenly between the preceding and following non-silent segments.</string>
+                                       </property>
+                                       <property name="text">
+                                        <string>Keep silence:</string>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                     <item row="3" column="1" colspan="2">
+                                      <widget class="QSpinBox" name="silenceThresholdSpinBox">
+                                       <property name="toolTip">
+                                        <string>Anything quieter than this will be considered silence.</string>
+                                       </property>
+                                       <property name="suffix">
+                                        <string> bd</string>
+                                       </property>
+                                       <property name="minimum">
+                                        <number>-50</number>
+                                       </property>
+                                       <property name="maximum">
+                                        <number>-10</number>
+                                       </property>
+                                       <property name="value">
+                                        <number>-34</number>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                     <item row="4" column="1" colspan="2">
+                                      <widget class="QSpinBox" name="KeepSilenceSpinBox">
+                                       <property name="toolTip">
+                                        <string>Leave some silence at the beginning and end of the chunks.
+Keeps the sound from sounding like it is abruptly cut off.
+When the length of the silence is less than the keep_silence duration
+it is split evenly between the preceding and following non-silent segments.</string>
+                                       </property>
+                                       <property name="suffix">
+                                        <string> mil. sec.</string>
+                                       </property>
+                                       <property name="minimum">
+                                        <number>100</number>
+                                       </property>
+                                       <property name="maximum">
+                                        <number>12000</number>
+                                       </property>
+                                       <property name="singleStep">
+                                        <number>5</number>
+                                       </property>
+                                       <property name="value">
+                                        <number>250</number>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                     <item row="1" column="3">
+                                      <widget class="QLabel" name="label_17">
+                                       <property name="text">
+                                        <string>Retry Delay:</string>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                     <item row="1" column="4">
+                                      <widget class="QDoubleSpinBox" name="retryDelayDoubleSpinBox">
+                                       <property name="suffix">
+                                        <string> sec</string>
+                                       </property>
+                                       <property name="decimals">
+                                        <number>1</number>
+                                       </property>
+                                       <property name="maximum">
+                                        <double>16.000000000000000</double>
+                                       </property>
+                                       <property name="value">
+                                        <double>1.500000000000000</double>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                     <item row="3" column="3">
+                                      <widget class="QLabel" name="label_16">
+                                       <property name="toolTip">
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set how many times the app should retry recognizing an audio chunk if initial transcription fails.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                       </property>
+                                       <property name="text">
+                                        <string>Retry Attempts:</string>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                     <item row="3" column="4">
+                                      <widget class="QSpinBox" name="retryAttemptsSpinBox">
+                                       <property name="toolTip">
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set how many times the app should retry recognizing an audio chunk if initial transcription fails.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                       </property>
+                                       <property name="value">
+                                        <number>3</number>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                    </layout>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QGroupBox" name="groupBox_22">
+                                    <property name="minimumSize">
+                                     <size>
+                                      <width>0</width>
+                                      <height>120</height>
+                                     </size>
+                                    </property>
+                                    <property name="title">
+                                     <string/>
+                                    </property>
+                                    <layout class="QGridLayout" name="gridLayout_23">
+                                     <property name="topMargin">
+                                      <number>0</number>
+                                     </property>
+                                     <property name="bottomMargin">
+                                      <number>0</number>
+                                     </property>
+                                     <item row="2" column="0">
+                                      <widget class="QGroupBox" name="groupBox_8">
+                                       <property name="maximumSize">
+                                        <size>
+                                         <width>16777215</width>
+                                         <height>180</height>
+                                        </size>
+                                       </property>
+                                       <property name="styleSheet">
+                                        <string notr="true">QGroupBox::title {
+color: rgb(76, 201, 240);
+background:transparent;
+}</string>
+                                       </property>
+                                       <property name="title">
+                                        <string>Process</string>
+                                       </property>
+                                       <layout class="QGridLayout" name="gridLayout_13">
+                                        <property name="topMargin">
+                                         <number>22</number>
+                                        </property>
+                                        <property name="horizontalSpacing">
+                                         <number>0</number>
+                                        </property>
+                                        <item row="2" column="0" colspan="4">
+                                         <widget class="QLabel" name="StringProgessLabel">
+                                          <property name="text">
+                                           <string>Progress Signal string</string>
+                                          </property>
+                                          <property name="alignment">
+                                           <set>Qt::AlignCenter</set>
+                                          </property>
+                                         </widget>
+                                        </item>
+                                        <item row="0" column="0" colspan="3">
+                                         <widget class="QCheckBox" name="JustChunkAudioCheckBox">
+                                          <property name="text">
+                                           <string>Just Chunk the audio.</string>
+                                          </property>
+                                         </widget>
+                                        </item>
+                                        <item row="0" column="3">
+                                         <widget class="QCheckBox" name="deleteChuncksCheckBox">
+                                          <property name="enabled">
+                                           <bool>true</bool>
+                                          </property>
+                                          <property name="toolTip">
+                                           <string>Kontho will split the audio based on where the speaker spoke and 
+export these audio chunks for recognition. 
+Checking this box (before clicking the Generate Button) will delete 
+the audio chunks after the recognition process is complete.</string>
+                                          </property>
+                                          <property name="text">
+                                           <string>Delete audio chunks upon completion.</string>
+                                          </property>
+                                          <property name="checked">
+                                           <bool>true</bool>
+                                          </property>
+                                         </widget>
+                                        </item>
+                                        <item row="1" column="0" colspan="4">
+                                         <widget class="QGroupBox" name="groupBox_19">
+                                          <property name="title">
+                                           <string/>
+                                          </property>
+                                          <layout class="QGridLayout" name="gridLayout_20">
+                                           <property name="leftMargin">
+                                            <number>0</number>
+                                           </property>
+                                           <property name="topMargin">
+                                            <number>0</number>
+                                           </property>
+                                           <property name="rightMargin">
+                                            <number>0</number>
+                                           </property>
+                                           <property name="bottomMargin">
+                                            <number>0</number>
+                                           </property>
+                                           <property name="spacing">
+                                            <number>0</number>
+                                           </property>
+                                           <item row="2" column="0" colspan="2">
+                                            <layout class="QHBoxLayout" name="horizontalLayout">
+                                             <property name="spacing">
+                                              <number>0</number>
+                                             </property>
+                                             <property name="topMargin">
+                                              <number>0</number>
+                                             </property>
+                                             <item>
+                                              <spacer name="horizontalSpacer_6">
+                                               <property name="orientation">
+                                                <enum>Qt::Horizontal</enum>
+                                               </property>
+                                               <property name="sizeHint" stdset="0">
+                                                <size>
+                                                 <width>40</width>
+                                                 <height>20</height>
+                                                </size>
+                                               </property>
+                                              </spacer>
+                                             </item>
+                                             <item>
+                                              <widget class="QLabel" name="label_11">
+                                               <property name="minimumSize">
+                                                <size>
+                                                 <width>50</width>
+                                                 <height>50</height>
+                                                </size>
+                                               </property>
+                                               <property name="maximumSize">
+                                                <size>
+                                                 <width>50</width>
+                                                 <height>50</height>
+                                                </size>
+                                               </property>
+                                               <property name="text">
+                                                <string/>
+                                               </property>
+                                               <property name="scaledContents">
+                                                <bool>true</bool>
+                                               </property>
+                                               <property name="alignment">
+                                                <set>Qt::AlignCenter</set>
+                                               </property>
+                                              </widget>
+                                             </item>
+                                             <item>
+                                              <spacer name="horizontalSpacer_7">
+                                               <property name="orientation">
+                                                <enum>Qt::Horizontal</enum>
+                                               </property>
+                                               <property name="sizeHint" stdset="0">
+                                                <size>
+                                                 <width>40</width>
+                                                 <height>20</height>
+                                                </size>
+                                               </property>
+                                              </spacer>
+                                             </item>
+                                            </layout>
+                                           </item>
+                                          </layout>
+                                         </widget>
+                                        </item>
+                                        <item row="7" column="0" colspan="4">
+                                         <widget class="QProgressBar" name="progressBar">
+                                          <property name="value">
+                                           <number>0</number>
+                                          </property>
+                                          <property name="alignment">
+                                           <set>Qt::AlignCenter</set>
+                                          </property>
+                                         </widget>
+                                        </item>
+                                        <item row="5" column="0" colspan="4">
+                                         <layout class="QHBoxLayout" name="horizontalLayout_5">
+                                          <property name="spacing">
+                                           <number>0</number>
+                                          </property>
+                                          <property name="topMargin">
+                                           <number>0</number>
+                                          </property>
+                                          <property name="bottomMargin">
+                                           <number>0</number>
+                                          </property>
+                                          <item>
+                                           <spacer name="horizontalSpacer_3">
+                                            <property name="orientation">
+                                             <enum>Qt::Horizontal</enum>
+                                            </property>
+                                            <property name="sizeHint" stdset="0">
+                                             <size>
+                                              <width>40</width>
+                                              <height>20</height>
+                                             </size>
+                                            </property>
+                                           </spacer>
+                                          </item>
+                                          <item>
+                                           <widget class="QPushButton" name="GeneratePushButton">
+                                            <property name="minimumSize">
+                                             <size>
+                                              <width>300</width>
+                                              <height>28</height>
+                                             </size>
+                                            </property>
+                                            <property name="toolTip">
+                                             <string>Click to Begin the Recognition Process</string>
+                                            </property>
+                                            <property name="text">
+                                             <string>🚀 Start Recognition Process</string>
+                                            </property>
+                                           </widget>
+                                          </item>
+                                          <item>
+                                           <spacer name="horizontalSpacer_4">
+                                            <property name="orientation">
+                                             <enum>Qt::Horizontal</enum>
+                                            </property>
+                                            <property name="sizeHint" stdset="0">
+                                             <size>
+                                              <width>40</width>
+                                              <height>20</height>
+                                             </size>
+                                            </property>
+                                           </spacer>
+                                          </item>
+                                         </layout>
+                                        </item>
+                                       </layout>
+                                      </widget>
+                                     </item>
+                                    </layout>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item row="0" column="2">
+                                <widget class="QPushButton" name="select_file_button">
+                                 <property name="minimumSize">
+                                  <size>
+                                   <width>150</width>
+                                   <height>28</height>
+                                  </size>
+                                 </property>
+                                 <property name="text">
+                                  <string>📂 Select WAV file</string>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                          <widget class="QWidget" name="tab_4">
+                           <attribute name="title">
+                            <string>AI Correction</string>
+                           </attribute>
+                           <layout class="QGridLayout" name="gridLayout_26">
+                            <item row="1" column="0">
+                             <widget class="QGroupBox" name="groupBox_24">
+                              <property name="minimumSize">
+                               <size>
+                                <width>0</width>
+                                <height>70</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QGroupBox::title {
+	color: #4cc9f0;
+	
+	background-color: rgb(240, 240, 240);
+}</string>
+                              </property>
+                              <property name="title">
+                               <string>Functions</string>
+                              </property>
+                              <layout class="QHBoxLayout" name="horizontalLayout_6">
+                               <property name="leftMargin">
+                                <number>10</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>14</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>6</number>
+                               </property>
+                               <item>
+                                <widget class="QGroupBox" name="groupBox_25">
+                                 <property name="styleSheet">
+                                  <string notr="true">QGroupBox {
+    border: none;
+	background-color: #f0f0f0;
+}</string>
+                                 </property>
+                                 <property name="title">
+                                  <string/>
+                                 </property>
+                                 <layout class="QHBoxLayout" name="horizontalLayout_7">
+                                  <item>
+                                   <spacer name="horizontalSpacer_5">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>40</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
+                                  </item>
+                                  <item>
+                                   <widget class="QPushButton" name="OpenTxtFilePushButton">
+                                    <property name="minimumSize">
+                                     <size>
+                                      <width>150</width>
+                                      <height>28</height>
+                                     </size>
+                                    </property>
+                                    <property name="text">
+                                     <string>Open TXT file</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QPushButton" name="SaveReferenceFilePushButton">
+                                    <property name="minimumSize">
+                                     <size>
+                                      <width>180</width>
+                                      <height>28</height>
+                                     </size>
+                                    </property>
+                                    <property name="text">
+                                     <string>Save Orginal file</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QPushButton" name="SaveAsRefferenceFilePushButton">
+                                    <property name="text">
+                                     <string>Save As</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QPushButton" name="AICorrectionPushButton">
+                                    <property name="minimumSize">
+                                     <size>
+                                      <width>200</width>
+                                      <height>28</height>
+                                     </size>
+                                    </property>
+                                    <property name="text">
+                                     <string>🤖🧠 AI Correction</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QLabel" name="loadingLabelForGif">
+                                    <property name="minimumSize">
+                                     <size>
+                                      <width>35</width>
+                                      <height>35</height>
+                                     </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>35</width>
+                                      <height>35</height>
+                                     </size>
+                                    </property>
+                                    <property name="text">
+                                     <string/>
+                                    </property>
+                                    <property name="scaledContents">
+                                     <bool>true</bool>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <spacer name="horizontalSpacer_10">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>40</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item row="0" column="0">
+                             <widget class="QPlainTextEdit" name="ReferenceTextPlainTextEdit">
+                              <property name="styleSheet">
+                               <string notr="true">
+QPlainTextEdit {
+  
+	font: 14px &quot;Noto Sans Bengali&quot;;
+	border: none;
+
+}
+</string>
+                              </property>
+                              <property name="placeholderText">
+                               <string>Put the audio script here. AI will use this as a reference to correct the SRT file content.</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </widget>
+                        </item>
+                        <item row="0" column="0">
+                         <widget class="QLabel" name="label_15">
+                          <property name="text">
+                           <string>** Go to Settings and set the Gemini API key to enable the AI Correction tab. **</string>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QGridLayout" name="gridLayout_18">
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item row="0" column="0">
+                     <widget class="Line" name="line_5">
+                      <property name="styleSheet">
+                       <string notr="true">border: none;</string>
+                      </property>
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <widget class="QGroupBox" name="groupBox_3">
+                    <property name="title">
+                     <string/>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_8">
+                     <property name="topMargin">
+                      <number>6</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>6</number>
+                     </property>
+                     <item row="1" column="0">
+                      <widget class="QGroupBox" name="groupBox_9">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>500</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QGroupBox::title {
+	color: #4cc9f0;
+
+}</string>
+                       </property>
+                       <property name="title">
+                        <string>Output</string>
+                       </property>
+                       <layout class="QGridLayout" name="gridLayout_9">
+                        <item row="0" column="0">
+                         <widget class="QTabWidget" name="tabWidget">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>820</height>
+                           </size>
+                          </property>
+                          <property name="tabPosition">
+                           <enum>QTabWidget::North</enum>
+                          </property>
+                          <property name="currentIndex">
+                           <number>1</number>
+                          </property>
+                          <widget class="QWidget" name="tab">
+                           <attribute name="title">
+                            <string>Text</string>
+                           </attribute>
+                           <layout class="QGridLayout" name="gridLayout_10">
+                            <item row="0" column="0">
+                             <widget class="QPlainTextEdit" name="plainTextEdit">
+                              <property name="styleSheet">
+                               <string notr="true">font: 57 16px &quot;Hind Siliguri Medium&quot;;</string>
+                              </property>
+                              <property name="placeholderText">
+                               <string>Recognized text will appear here.</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                          <widget class="QWidget" name="tab_2">
+                           <attribute name="title">
+                            <string>Time stamps</string>
+                           </attribute>
+                           <layout class="QGridLayout" name="gridLayout_11">
+                            <item row="1" column="0">
+                             <widget class="QGroupBox" name="groupBox_16">
+                              <property name="title">
+                               <string/>
+                              </property>
+                              <layout class="QGridLayout" name="gridLayout_16">
+                               <item row="0" column="0">
+                                <widget class="QTableWidget" name="tableWidget">
+                                 <property name="styleSheet">
+                                  <string notr="true">font: 14px &quot;Noto Sans Bengali&quot;;</string>
+                                 </property>
+                                 <column>
+                                  <property name="text">
+                                   <string>Start</string>
+                                  </property>
+                                 </column>
+                                 <column>
+                                  <property name="text">
+                                   <string>End</string>
+                                  </property>
+                                 </column>
+                                 <column>
+                                  <property name="text">
+                                   <string>Subtitle Text</string>
+                                  </property>
+                                 </column>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item row="1" column="2">
+                             <widget class="QGroupBox" name="groupBox_12">
+                              <property name="styleSheet">
+                               <string notr="true">QGroupBox {
+    border: none;
+	background-color: rgb(154, 224, 245);
+}
+QGroupBox::title {
+	border:none;
+	background-color: rgb(76, 201, 240);
+}
+</string>
+                              </property>
+                              <property name="title">
+                               <string/>
+                              </property>
+                              <layout class="QGridLayout" name="gridLayout_14">
+                               <item row="0" column="0">
+                                <widget class="QGroupBox" name="groupBox_28">
+                                 <property name="title">
+                                  <string/>
+                                 </property>
+                                 <layout class="QGridLayout" name="gridLayout_29">
+                                  <item row="1" column="0">
+                                   <widget class="QGroupBox" name="groupBox_13">
+                                    <property name="styleSheet">
+                                     <string notr="true">QGroupBox {
+    border: none;
+	background-color: rgb(200, 236, 243);
+}
+
+QGroupBox::title {
+	border:none;
+	
+	color: rgb(76, 201, 240);
+	background-color: #9ae0f5;
+}</string>
+                                    </property>
+                                    <property name="title">
+                                     <string>Functions</string>
+                                    </property>
+                                    <layout class="QGridLayout" name="gridLayout_19">
+                                     <property name="topMargin">
+                                      <number>20</number>
+                                     </property>
+                                     <item row="0" column="0">
+                                      <widget class="QGroupBox" name="groupBox_27">
+                                       <property name="styleSheet">
+                                        <string notr="true">QGroupBox {
+    border: none;
+	background-color: rgb(208, 248, 255);
+}</string>
+                                       </property>
+                                       <property name="title">
+                                        <string/>
+                                       </property>
+                                       <layout class="QGridLayout" name="gridLayout_28">
+                                        <item row="0" column="0">
+                                         <widget class="QPushButton" name="SavePushButton">
+                                          <property name="toolTip">
+                                           <string>Save Table Changes to File Path</string>
+                                          </property>
+                                          <property name="text">
+                                           <string>💾 Save</string>
+                                          </property>
+                                          <property name="shortcut">
+                                           <string>Ctrl+S</string>
+                                          </property>
+                                         </widget>
+                                        </item>
+                                        <item row="0" column="1">
+                                         <widget class="QPushButton" name="SaveAsPushButton">
+                                          <property name="text">
+                                           <string>📁 Save as</string>
+                                          </property>
+                                          <property name="shortcut">
+                                           <string>Ctrl+S</string>
+                                          </property>
+                                         </widget>
+                                        </item>
+                                        <item row="1" column="0">
+                                         <widget class="QPushButton" name="AddPushButton">
+                                          <property name="toolTip">
+                                           <string>Duplicate Selected Row</string>
+                                          </property>
+                                          <property name="styleSheet">
+                                           <string notr="true"/>
+                                          </property>
+                                          <property name="text">
+                                           <string>➕</string>
+                                          </property>
+                                         </widget>
+                                        </item>
+                                        <item row="1" column="1">
+                                         <widget class="QPushButton" name="RemovePushButton">
+                                          <property name="toolTip">
+                                           <string>Remove Selected Rows</string>
+                                          </property>
+                                          <property name="styleSheet">
+                                           <string notr="true"/>
+                                          </property>
+                                          <property name="text">
+                                           <string>➖</string>
+                                          </property>
+                                         </widget>
+                                        </item>
+                                        <item row="0" column="3">
+                                         <widget class="QPushButton" name="MergePushButton">
+                                          <property name="toolTip">
+                                           <string>Merge Selected Rows</string>
+                                          </property>
+                                          <property name="text">
+                                           <string>🔗 Merge</string>
+                                          </property>
+                                         </widget>
+                                        </item>
+                                        <item row="0" column="2">
+                                         <widget class="QPushButton" name="OpenSrtPushButton">
+                                          <property name="text">
+                                           <string>📁 Open Srt</string>
+                                          </property>
+                                         </widget>
+                                        </item>
+                                        <item row="1" column="3">
+                                         <widget class="QPushButton" name="moveDownPushButton">
+                                          <property name="toolTip">
+                                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Swipe with the Content of the Lower Row&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                          </property>
+                                          <property name="text">
+                                           <string>🡻 Down</string>
+                                          </property>
+                                         </widget>
+                                        </item>
+                                        <item row="1" column="2">
+                                         <widget class="QPushButton" name="moveUpPushButton">
+                                          <property name="toolTip">
+                                           <string>Swipe with the Content of the Upper Row</string>
+                                          </property>
+                                          <property name="text">
+                                           <string>🡹 Up</string>
+                                          </property>
+                                         </widget>
+                                        </item>
+                                        <item row="2" column="0" colspan="4">
+                                         <widget class="QPushButton" name="RestorePushButton">
+                                          <property name="text">
+                                           <string>🔄 Restore Previous Table</string>
+                                          </property>
+                                         </widget>
+                                        </item>
+                                       </layout>
+                                      </widget>
+                                     </item>
+                                    </layout>
+                                   </widget>
+                                  </item>
+                                  <item row="2" column="0">
+                                   <widget class="QGroupBox" name="groupBox_14">
+                                    <property name="styleSheet">
+                                     <string notr="true">QGroupBox {
+    border: none;
+	background-color: rgb(200, 236, 243);
+}
+
+QGroupBox::title {
+	border:none;
+	
+	color: rgb(76, 201, 240);
+	background-color: #9ae0f5;
+}</string>
+                                    </property>
+                                    <property name="title">
+                                     <string>Cell Text</string>
+                                    </property>
+                                    <layout class="QGridLayout" name="gridLayout_15">
+                                     <property name="topMargin">
+                                      <number>22</number>
+                                     </property>
+                                     <item row="0" column="0">
+                                      <widget class="QGroupBox" name="groupBox_29">
+                                       <property name="styleSheet">
+                                        <string notr="true">QGroupBox {
+    border: none;
+	background-color: rgb(208, 248, 255);
+}
+
+ border: none;</string>
+                                       </property>
+                                       <property name="title">
+                                        <string/>
+                                       </property>
+                                       <layout class="QGridLayout" name="gridLayout_30">
+                                        <item row="0" column="0">
+                                         <widget class="QGroupBox" name="groupBox_15">
+                                          <property name="minimumSize">
+                                           <size>
+                                            <width>0</width>
+                                            <height>38</height>
+                                           </size>
+                                          </property>
+                                          <property name="title">
+                                           <string/>
+                                          </property>
+                                          <layout class="QHBoxLayout" name="horizontalLayout_2">
+                                           <property name="topMargin">
+                                            <number>0</number>
+                                           </property>
+                                           <property name="bottomMargin">
+                                            <number>0</number>
+                                           </property>
+                                           <item>
+                                            <widget class="QLabel" name="label_5">
+                                             <property name="text">
+                                              <string>Font Family:</string>
+                                             </property>
+                                            </widget>
+                                           </item>
+                                           <item>
+                                            <widget class="QFontComboBox" name="fontComboBox">
+                                             <property name="maximumSize">
+                                              <size>
+                                               <width>200</width>
+                                               <height>16777215</height>
+                                              </size>
+                                             </property>
+                                             <property name="styleSheet">
+                                              <string notr="true"> border: none;</string>
+                                             </property>
+                                            </widget>
+                                           </item>
+                                           <item>
+                                            <widget class="QLabel" name="label_9">
+                                             <property name="text">
+                                              <string>Size:</string>
+                                             </property>
+                                            </widget>
+                                           </item>
+                                           <item>
+                                            <widget class="QSpinBox" name="FontSizeSpinBox">
+                                             <property name="minimumSize">
+                                              <size>
+                                               <width>50</width>
+                                               <height>0</height>
+                                              </size>
+                                             </property>
+                                             <property name="styleSheet">
+                                              <string notr="true"> border: none;</string>
+                                             </property>
+                                             <property name="minimum">
+                                              <number>6</number>
+                                             </property>
+                                             <property name="maximum">
+                                              <number>72</number>
+                                             </property>
+                                             <property name="value">
+                                              <number>14</number>
+                                             </property>
+                                            </widget>
+                                           </item>
+                                          </layout>
+                                         </widget>
+                                        </item>
+                                        <item row="1" column="0">
+                                         <widget class="QPlainTextEdit" name="plainTextEdit_2">
+                                          <property name="styleSheet">
+                                           <string notr="true">border: none;</string>
+                                          </property>
+                                         </widget>
+                                        </item>
+                                        <item row="2" column="0">
+                                         <widget class="QLabel" name="label_10">
+                                          <property name="text">
+                                           <string/>
+                                          </property>
+                                         </widget>
+                                        </item>
+                                       </layout>
+                                      </widget>
+                                     </item>
+                                    </layout>
+                                   </widget>
+                                  </item>
+                                  <item row="0" column="0">
+                                   <widget class="QGroupBox" name="groupBox_30">
+                                    <property name="minimumSize">
+                                     <size>
+                                      <width>0</width>
+                                      <height>190</height>
+                                     </size>
+                                    </property>
+                                    <property name="styleSheet">
+                                     <string notr="true">QGroupBox {
+    border: none;
+	background-color: rgb(200, 236, 243);
+}
+
+QGroupBox::title {
+	border:none;
+	
+	color: rgb(76, 201, 240);
+	background-color: #9ae0f5;
+}</string>
+                                    </property>
+                                    <property name="title">
+                                     <string>Find and Replace</string>
+                                    </property>
+                                    <layout class="QGridLayout" name="gridLayout_32">
+                                     <property name="topMargin">
+                                      <number>22</number>
+                                     </property>
+                                     <item row="0" column="0">
+                                      <widget class="QGroupBox" name="groupBox_31">
+                                       <property name="styleSheet">
+                                        <string notr="true">QGroupBox {
+    border: none;
+	background-color: rgb(208, 248, 255);
+}
+QPushButton{
+font-size:12px;
+max-height:20px;
+}</string>
+                                       </property>
+                                       <property name="title">
+                                        <string/>
+                                       </property>
+                                       <layout class="QGridLayout" name="gridLayout_33">
+                                        <property name="leftMargin">
+                                         <number>6</number>
+                                        </property>
+                                        <property name="topMargin">
+                                         <number>3</number>
+                                        </property>
+                                        <property name="rightMargin">
+                                         <number>6</number>
+                                        </property>
+                                        <property name="bottomMargin">
+                                         <number>3</number>
+                                        </property>
+                                        <property name="spacing">
+                                         <number>3</number>
+                                        </property>
+                                        <item row="0" column="0">
+                                         <widget class="QGroupBox" name="groupBox_32">
+                                          <property name="styleSheet">
+                                           <string notr="true">QGroupBox::title {
+color: rgb(76, 201, 240);
+background:transparent;
+font: 10px &quot;DM Mono&quot;;
+}
+</string>
+                                          </property>
+                                          <property name="title">
+                                           <string>Input</string>
+                                          </property>
+                                          <layout class="QGridLayout" name="gridLayout_34">
+                                           <property name="topMargin">
+                                            <number>18</number>
+                                           </property>
+                                           <property name="rightMargin">
+                                            <number>6</number>
+                                           </property>
+                                           <property name="spacing">
+                                            <number>3</number>
+                                           </property>
+                                           <item row="0" column="0">
+                                            <widget class="QGroupBox" name="groupBox_34">
+                                             <property name="styleSheet">
+                                              <string notr="true">QGroupBox{
+border: 1px solid #4cc9f0;
+}</string>
+                                             </property>
+                                             <property name="title">
+                                              <string/>
+                                             </property>
+                                             <layout class="QGridLayout" name="gridLayout_36">
+                                              <item row="2" column="0">
+                                               <widget class="QPushButton" name="ReplacePushButton">
+                                                <property name="text">
+                                                 <string>Replace</string>
+                                                </property>
+                                               </widget>
+                                              </item>
+                                              <item row="2" column="1">
+                                               <widget class="QPushButton" name="ReplaceAllPushButton">
+                                                <property name="text">
+                                                 <string>Replace All</string>
+                                                </property>
+                                               </widget>
+                                              </item>
+                                              <item row="1" column="0" colspan="2">
+                                               <widget class="QLineEdit" name="ReplaceInputLineEdit">
+                                                <property name="placeholderText">
+                                                 <string> Replace</string>
+                                                </property>
+                                                <property name="clearButtonEnabled">
+                                                 <bool>true</bool>
+                                                </property>
+                                               </widget>
+                                              </item>
+                                              <item row="0" column="0" colspan="2">
+                                               <widget class="QLineEdit" name="FindLineEdit">
+                                                <property name="placeholderText">
+                                                 <string> Find</string>
+                                                </property>
+                                                <property name="clearButtonEnabled">
+                                                 <bool>true</bool>
+                                                </property>
+                                               </widget>
+                                              </item>
+                                             </layout>
+                                            </widget>
+                                           </item>
+                                          </layout>
+                                         </widget>
+                                        </item>
+                                        <item row="0" column="1">
+                                         <widget class="QGroupBox" name="groupBox_33">
+                                          <property name="styleSheet">
+                                           <string notr="true">QGroupBox::title {
+color: rgb(76, 201, 240);
+background:transparent;
+}</string>
+                                          </property>
+                                          <property name="title">
+                                           <string>Functions</string>
+                                          </property>
+                                          <layout class="QGridLayout" name="gridLayout_35">
+                                           <property name="leftMargin">
+                                            <number>6</number>
+                                           </property>
+                                           <property name="topMargin">
+                                            <number>18</number>
+                                           </property>
+                                           <item row="0" column="0">
+                                            <widget class="QGroupBox" name="groupBox_35">
+                                             <property name="styleSheet">
+                                              <string notr="true">QGroupBox{
+border: 1px solid #4cc9f0;
+}</string>
+                                             </property>
+                                             <property name="title">
+                                              <string/>
+                                             </property>
+                                             <layout class="QGridLayout" name="gridLayout_37">
+                                              <item row="2" column="0">
+                                               <widget class="QPushButton" name="UpPushButton">
+                                                <property name="text">
+                                                 <string>🡹</string>
+                                                </property>
+                                               </widget>
+                                              </item>
+                                              <item row="2" column="1">
+                                               <widget class="QPushButton" name="DownPushButton">
+                                                <property name="text">
+                                                 <string>🡻</string>
+                                                </property>
+                                               </widget>
+                                              </item>
+                                              <item row="1" column="0" colspan="2">
+                                               <widget class="QLineEdit" name="MatchedNumberLineEdit"/>
+                                              </item>
+                                              <item row="0" column="0" colspan="2">
+                                               <widget class="QComboBox" name="MatchFlagsComboBox"/>
+                                              </item>
+                                             </layout>
+                                            </widget>
+                                           </item>
+                                          </layout>
+                                         </widget>
+                                        </item>
+                                       </layout>
+                                      </widget>
+                                     </item>
+                                    </layout>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item row="1" column="1">
+                             <layout class="QGridLayout" name="gridLayout_17"/>
+                            </item>
+                            <item row="0" column="0" colspan="3">
+                             <widget class="QGroupBox" name="groupBox_18">
+                              <property name="minimumSize">
+                               <size>
+                                <width>0</width>
+                                <height>122</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>16777215</width>
+                                <height>130</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QGroupBox {
+    border: none;
+	background-color: rgb(154, 224, 245);
+}
+QGroupBox::title {
+	border:none;
+	color: #4cc9f0;
+	background-color: #c8ecf3;
+}
+</string>
+                              </property>
+                              <property name="title">
+                               <string>Audio</string>
+                              </property>
+                              <layout class="QGridLayout" name="gridLayout_21">
+                               <property name="topMargin">
+                                <number>13</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>14</number>
+                               </property>
+                               <property name="horizontalSpacing">
+                                <number>0</number>
+                               </property>
+                               <property name="verticalSpacing">
+                                <number>4</number>
+                               </property>
+                               <item row="1" column="0">
+                                <spacer name="horizontalSpacer_8">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>40</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                               <item row="1" column="1" rowspan="2" colspan="2">
+                                <widget class="QGroupBox" name="groupBox_20">
+                                 <property name="styleSheet">
+                                  <string notr="true">QGroupBox {
+    border: none;
+	background-color: rgb(200, 236, 243);
+}
+
+QGroupBox::title {
+	border:none;
+	
+	color: rgb(76, 201, 240);
+	background-color: rgb(208, 248, 255);
+}</string>
+                                 </property>
+                                 <property name="title">
+                                  <string/>
+                                 </property>
+                                 <layout class="QHBoxLayout" name="horizontalLayout_3">
+                                  <property name="topMargin">
+                                   <number>8</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>11</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="duration_label">
+                                    <property name="minimumSize">
+                                     <size>
+                                      <width>150</width>
+                                      <height>0</height>
+                                     </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>450</width>
+                                      <height>16777215</height>
+                                     </size>
+                                    </property>
+                                    <property name="styleSheet">
+                                     <string notr="true"/>
+                                    </property>
+                                    <property name="text">
+                                     <string>00:00:00</string>
+                                    </property>
+                                    <property name="alignment">
+                                     <set>Qt::AlignCenter</set>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QPushButton" name="CopyCurrentTimeCOdePushButton">
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>40</width>
+                                      <height>16777215</height>
+                                     </size>
+                                    </property>
+                                    <property name="styleSheet">
+                                     <string notr="true"/>
+                                    </property>
+                                    <property name="text">
+                                     <string/>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="Line" name="line_2">
+                                    <property name="orientation">
+                                     <enum>Qt::Vertical</enum>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QPushButton" name="PreviousPushButton">
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>40</width>
+                                      <height>16777215</height>
+                                     </size>
+                                    </property>
+                                    <property name="text">
+                                     <string>&lt;</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QPushButton" name="PlayPausePushButton_2">
+                                    <property name="toolTip">
+                                     <string>Media Play/Pause </string>
+                                    </property>
+                                    <property name="text">
+                                     <string>⏯ Pay</string>
+                                    </property>
+                                    <property name="shortcut">
+                                     <string>Space</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QPushButton" name="NextPushButton">
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>40</width>
+                                      <height>16777215</height>
+                                     </size>
+                                    </property>
+                                    <property name="text">
+                                     <string>&gt;</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="Line" name="line_4">
+                                    <property name="orientation">
+                                     <enum>Qt::Vertical</enum>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QLabel" name="label_12">
+                                    <property name="text">
+                                     <string>Speed:</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QComboBox" name="Playback_speed_comboBox">
+                                    <property name="minimumSize">
+                                     <size>
+                                      <width>0</width>
+                                      <height>22</height>
+                                     </size>
+                                    </property>
+                                    <property name="styleSheet">
+                                     <string notr="true"/>
+                                    </property>
+                                    <item>
+                                     <property name="text">
+                                      <string>1x</string>
+                                     </property>
+                                    </item>
+                                    <item>
+                                     <property name="text">
+                                      <string>1.25x</string>
+                                     </property>
+                                    </item>
+                                    <item>
+                                     <property name="text">
+                                      <string>1.5x</string>
+                                     </property>
+                                    </item>
+                                    <item>
+                                     <property name="text">
+                                      <string>1.75x</string>
+                                     </property>
+                                    </item>
+                                    <item>
+                                     <property name="text">
+                                      <string>2x</string>
+                                     </property>
+                                    </item>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="Line" name="line_3">
+                                    <property name="orientation">
+                                     <enum>Qt::Vertical</enum>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QLabel" name="TotalDurationLabel">
+                                    <property name="minimumSize">
+                                     <size>
+                                      <width>150</width>
+                                      <height>0</height>
+                                     </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>400</width>
+                                      <height>16777215</height>
+                                     </size>
+                                    </property>
+                                    <property name="text">
+                                     <string>00:00:00</string>
+                                    </property>
+                                    <property name="alignment">
+                                     <set>Qt::AlignCenter</set>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item row="1" column="3">
+                                <spacer name="horizontalSpacer_9">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>40</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                               <item row="0" column="0" colspan="4">
+                                <widget class="QGroupBox" name="groupBox_17">
+                                 <property name="minimumSize">
+                                  <size>
+                                   <width>0</width>
+                                   <height>45</height>
+                                  </size>
+                                 </property>
+                                 <property name="styleSheet">
+                                  <string notr="true">QGroupBox {
+    border: none;
+	background-color: rgb(200, 236, 243);
+}
+
+QGroupBox::title {
+	border:none;
+	
+	color: rgb(76, 201, 240);
+	background-color: rgb(208, 248, 255);
+}</string>
+                                 </property>
+                                 <property name="title">
+                                  <string/>
+                                 </property>
+                                 <layout class="QGridLayout" name="gridLayout_31">
+                                  <property name="topMargin">
+                                   <number>11</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>8</number>
+                                  </property>
+                                  <item row="0" column="0">
+                                   <widget class="QSlider" name="media_slider_horizontalSlider">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QGroupBox" name="groupBox_21">
+                 <property name="styleSheet">
+                  <string notr="true">QGroupBox {
+  
+	background-color: rgb(207, 231, 224);
+    border: 1px solid #ddd;     /* Subtle border to define edges */
+    border-radius: 5px;         /* Soft rounded corners for a modern feel */
+padding: 0px;
+	
+}
+</string>
+                 </property>
+                 <property name="title">
+                  <string/>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_4">
+                  <item>
+                   <widget class="QLabel" name="label_14">
+                    <property name="text">
+                     <string>This feature is currently available only in the Pro version of Nms Kontho.</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
